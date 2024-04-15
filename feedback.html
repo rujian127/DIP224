@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='feedback.css' rel='stylesheet'>
+        <title>Form Reviews</title>
+    </head>
+
+    <body>
+        <div id="message" style="display: none;"></div> 
+        <div class="wrapper">
+            
+            <form id="feedback-form" action="feedback-submit.php" method="post">
+                <div class="question1">
+                    <h2>User Feedback Form</h2>
+    
+                    <h4>Question 1: How would you rate the user-friendliness of our carbon footprint calculator?</h4>
+        
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question1" value="A" required> "A. Very easy to use"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question1" value="B" required> "B. Somewhat easy to use"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question1" value="C" required> "C. Neutral"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question1" value="D" required> "D. Difficult to use"
+                        </label>
+                    </div>
+                    <div class="question-button">
+                        <button type="button" class="btn next" onclick="showNextQuestion('question2')">Next Question</button>
+                    </div>
+        
+                </div>
+        
+                <div class="question2" style="display: none;">
+                    <h2>User Feedback Form</h2>
+    
+                    <h4>Question 2: How satisfied are you with the accuracy of the carbon footprint calculations provided by our system?</h4>
+        
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question2" value="A" required> "A. Very satisfied"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question2" value="B" required> "B. Satisfied"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question2" value="C" required> "C. Neutral"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question2" value="D" required> "D. Not satisfied"
+                        </label>
+                    </div>
+                    <div class="question-button">
+                        <button type="button" class="btn back" onclick="showPreviousQuestion('question1')">Back</button>
+                        <button type="button" class="btn next" onclick="showNextQuestion('question3')">Next Question</button>
+                    </div>
+                    
+                </div>
+    
+                <div class="question3" style="display: none;">
+                    <h2>User Feedback Form</h2>
+    
+                    <h4>Question 3: How satisfied are you with the overall design and layout of our carbon footprint system website?</h4>
+        
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question3" value="A" required> "A. Very satisfied"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question3" value="B" required> "B. Satisfied"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question3" value="C" required> "C. Neutral"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question3" value="D" required> "D. Not satisfied"
+                        </label>
+                    </div>
+                    <div class="question-button">
+                        <button type="button" class="btn back" onclick="showPreviousQuestion('question2')">Back</button>
+                        <button type="button" class="btn next" onclick="showNextQuestion('question4')">Next Question</button>
+                    </div>
+                    
+                </div>
+    
+                <div class="question4" style="display: none;">
+                    <h2>User Feedback Form</h2>
+    
+                    <h4>Question 4: How likely are you to use our carbon footprint system regularly to track your environmental impact?</h4>
+        
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question4" value="A" required> "A. Very likely"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question4" value="B" required> "B. Somewhat likely"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question4" value="C" required> "C. Neutral"
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="question4" value="D" required> "D. Not likely"
+                        </label>
+                    </div>
+                    <div class="question-button">
+                        <button type="button" class="btn back" onclick="showPreviousQuestion('question3')">Back</button>
+                        <button type="button" class="btn next" onclick="showNextQuestion('overall-rating')">Next Question</button>
+                    </div>
+                    
+                </div>
+                
+                <div class="overall-rating" style="display: none;">
+                    <h3>Please Rate Us ☺</h3>
+                    
+                    <div class="rating">
+                        
+                        <input type="radio" name="rate" id="rate-5" value="5 star">
+                        <label for="rate-5" class="fa fa-star"></label>    
+        
+                        <input type="radio" name="rate" id="rate-4" value="4 star">
+                        <label for="rate-4" class="fa fa-star"></label>
+        
+                        <input type="radio" name="rate" id="rate-3" value="3 star">
+                        <label for="rate-3" class="fa fa-star"></label>
+        
+                        <input type="radio" name="rate" id="rate-2" value="2 star">
+                        <label for="rate-2" class="fa fa-star"></label>
+        
+                        <input type="radio" name="rate" id="rate-1" value="1 star">
+                        <label for="rate-1" class="fa fa-star"></label>
+        
+                    </div>
+                    
+                    <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+        
+                    <div class="btn-group">
+                        <button type="button" class="btn back" onclick="showPreviousQuestion('question4')">Back</button>
+                        <button type="submit" class="btn submit" onclick="submit()">Submit</button>
+                    </div>
+        
+                </div>
+
+            </form>
+            
+    
+        </div>
+    
+        <script>
+
+            function showNextQuestion(nextQuestion) {
+                document.querySelector('.question1').style.display = 'none';
+                document.querySelector('.question2').style.display = 'none';
+                document.querySelector('.question3').style.display = 'none';
+                document.querySelector('.question4').style.display = 'none';
+                document.querySelector('.overall-rating').style.display = 'none';
+                document.querySelector('.' + nextQuestion).style.display = 'block';
+            }
+    
+            function showPreviousQuestion(previousQuestion) {
+                document.querySelector('.question1').style.display = 'none';
+                document.querySelector('.question2').style.display = 'none';
+                document.querySelector('.question3').style.display = 'none';
+                document.querySelector('.question4').style.display = 'none';
+                document.querySelector('.overall-rating').style.display = 'none';
+                document.querySelector('.' + previousQuestion).style.display = 'block';
+            }
+    
+            function submit() {
+                // Add your submission logic here
+            }
+
+        </script>
+    
+    <script src="feedback.js"></script>
+
+    </body>
+    
+
+</html>

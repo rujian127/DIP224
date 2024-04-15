@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--yellow: #FFBD13;
+	--blue: #4383FF;
+	--blue-d-1: #3278FF;
+	--light: #F5F5F5;
+	--grey: #AAA;
+	--white: #FFF;
+	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+
+body {
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: cover;
+    background-position: center;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+}
+
+.wrapper {
+	background: var(--white);
+	padding: 2rem;
+	max-width: 576px;
+	width: 100%;
+	border-radius: .75rem;
+	box-shadow: var(--shadow);
+	text-align: center;
+}
+
+.question1 h4{
+	text-align: left;
+	margin-top: 25px;
+	font-size: 17px;
+}
+
+.question2 h4{
+	text-align: left;
+	margin-top: 25px;
+	font-size: 17px;
+}
+
+.question3 h4{
+	text-align: left;
+	margin-top: 25px;
+	font-size: 17px;
+}
+
+.question4 h4{
+	text-align: left;
+	margin-top: 25px;
+	font-size: 17px;
+}
+
+.options{
+	display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.options input {
+	cursor: pointer;
+}
+
+.wrapper h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+
+.rating {
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: var(--yellow);
+	margin-bottom: 2rem;
+}
+
+.wrapper .rating input {
+    display: none;
+}
+
+.rating label {
+    display: flex;
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.rating input:not(:checked) ~ label:hover,
+.rating input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+
+input:checked ~ label {
+    color: #fd4;
+}
+
+.rating label {
+    cursor: pointer;
+}
+
+
+
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	resize: none;
+	margin-bottom: .5rem;
+}
+
+.btn-group {
+	display: flex;
+	grid-gap: 40px;
+	align-items: center;
+    justify-content: center;
+}
+
+.btn-group .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+
+.btn-group .btn.submit {
+	background: rgb(0, 110, 255);
+	color: white;
+}
+
+.btn-group .btn.submit:hover {
+	background: var(--blue-d-1);
+}
+
+.btn-group .btn.cancel {
+	background: var(--white);
+	color: var(--blue);
+}
+
+.btn-group .btn.cancel:hover {
+	color: red;
+    background: var(--light);
+}
+
+
+.question-button {
+	display: flex;
+	grid-gap: 40px;
+	align-items: center;
+    justify-content: center;
+	padding-top: 25px;
+}
+
+.question-button .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+
+.question-button .btn.next {
+	background: rgb(0, 110, 255);
+	color: white;
+}
+
+.question-button .btn.next:hover {
+	background: var(--blue-d-1);
+}
+
+.question-button .btn.back {
+	background: var(--white);
+	color: var(--blue);
+}
+
+.question-button .btn.back:hover {
+	color: red;
+    background: var(--light);
+}

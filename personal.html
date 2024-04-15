@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="personal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solitreo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="message" style="display: none;"></div>
+    <form action="personal.php" method="post" id="personal">
+        <div class="banner">
+            <div class="navbar">
+                <a href="home.html" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo">
+                    <span class="logo-text">A cool carbon tracker</span>
+                </a>
+                <ul class="left-nav">
+                    <li>
+                        <a href="#">Carbon Footprint Calculator</a>
+                        <ul class="dropdown">
+                            <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="share.html">Share</a></li>
+                </ul>
+                <div class="account-name">
+                    <ul>
+                        <li><a href="personal.html">Account</a></li>
+                        <li><a href="login.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <nav>
+                    <div class="accountmanagement">
+                        <h1 class="navbar-title">Account Management</h1>
+                        <ul class="navbar-menu">
+                            <li><a href="personal.html"><span class="nav-item">Personal Information</span></a></li>
+                            <li><a href="car1.html"><span class="nav-item">Transportation - Car</span></a></li>
+                            <li><a href="motorbike.html"><span class="nav-item">Transportation - Motorbike</span></a></li>
+                            <li><a href="busandrail.html"><span class="nav-item">Transportation - Bus and Rail</span></a></li>
+                            <li><a href="airplane.html"><span the="nav-item">Transportation - Flight</span></a></li>
+                            <li><a href="diet.html"><span class="nav-item">Diet</span></a></li>
+                            <li><a href="house.html"><span class="nav-item">House Utilities</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container2">
+                    <div class="account-section">
+                        <div class="account-icon">
+                            <i class="fas fa-user"></i>
+                            <br>
+                            <p>Account ID</p>
+                        </div>
+
+                        <div class="account-details">
+                            <div class="input-group">
+                                <label for="profile-name">PROFILE NAME:</label>
+                                <input type="text" id="profile-name" name="userName" placeholder="[INSERT NAME HERE]">
+                            </div>
+                            <div class="input-group">
+                                <label for="user-id">USER ID:</label>
+                                <input type="text" id="user-id" name="userId" placeholder="[RANDOMISED NUMBER SET OF 9 DIGITS]">
+                            </div>
+                            <button type="submit" id="saveChanges">SAVE CHANGES</button>
+                        </div>
+                    </div>
+                    
+                    <div class="personal-info-section">
+                        <div class="privacy-statement">
+                            <h2>Personal Information</h2>
+                            <p>This information is private and <strong>will not be shared with anyone!</strong></p>
+                        </div>
+                        <div class="personal-details">
+                            <div class="input-group">
+                                <label for="email">EMAIL ADDRESS:</label>
+                                <input type="email" id="email" name="email" placeholder="[insert address here]">
+                            </div>
+                            <div class="input-group">
+                                <label for="country">COUNTRY/REGION:</label>
+                                <select id="country" name="country" aria-required="true">
+                                    <option value="">Please select a country</option>
+                                    <option value="MY">Malaysia</option>
+                                    <option value="SG">Singapore</option>
+                                    <option value="CN">China</option>
+                                    <option value="HK">Hong Kong</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="KR">Korea</option>
+                                    <option value="US">United States</option>
+                                    <option value="AU">Australia</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="dob">DATE OF BIRTH:</label>
+                                <input type="date" id="dob" name="dob">
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="personal.js"></script>
+</body>
+</html>

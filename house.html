@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Utilities</title>
+    <link rel="stylesheet" href="house.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solitreo&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="message" style="display: none;"></div> 
+    <div class="banner">
+        <div class="navbar">
+            <a href="home.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="logo-text">A cool carbon tracker</span>
+            </a>
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Carbon Footprint Calculator</a>
+                    <ul class = "dropdown">
+                        <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="share.html">Share</a></li>
+            </ul>
+            <div class="account-name">
+                <ul>
+                    <li><a href="personal.html">Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="accountmanagement">
+                    <h1 class="navbar-title">Account Management</h1>
+                    <ul class="navbar-menu">
+                        <li><a href="personal.html"><span class="nav-item">Personal Information</span></a></li>
+                        <li><a href="car1.html"><span class="nav-item">Transportation - Car</span></a></li>
+                        <li><a href="motorbike.html"><span class="nav-item">Transportation - Motorbike</span></a></li>
+                        <li><a href="busandrail.html"><span class="nav-item">Transportation - Bus and Rail</span></a></li>
+                        <li><a href="airplane.html"><span class="nav-item">Transportation - Flight</span></a></li>
+                        <li><a href="diet.html"><span class="nav-item">Diet</span></a></li>
+                        <li><a href="house.html"><span class="nav-item">House Utilities</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container2">
+
+                <div class="house-section">
+
+                    <div class="house-image"></div>
+
+                    <label for="house", style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 30px; justify-content: center;">House Utilities</label>
+
+                    <textarea placeholder="Please provide us your details here.." required></textarea>
+        
+                </div>
+
+
+                <form class="utilities-form" action="house.php" method="post">
+
+                    <div class="input-group">
+                        <label for="electricity">Electricity:</label>
+                        <input type="number" id="electricity" name="electricity" placeholder="number">
+                        <span class="input-unit">factor of 0.4071 kgCO<sub>2</sub>e/kWh</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="natural-gas">Natural Gas:</label>
+                        <input type="number" id="natural-gas" name="natural-gas" placeholder="number">
+                        <span class="input-unit">kWh, or RM</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="heating-oil">Heating Oil:</label>
+                        <input type="number" id="heating-oil" name="heating-oil" placeholder="number">
+                        <span class="input-unit">kWh or litres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="propane">Propane:</label>
+                        <input type="number" id="propane" name="propane" placeholder="number">
+                        <span class="input-unit">Litres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="lgp">LGP:</label>
+                        <input type="number" id="lgp" name="lgp" placeholder="number">
+                        <span class="input-unit">kWh or Litres</span>
+                    </div>
+            
+                    <button type="submit" id="calculateUtilities">Calculate and Add to Footprint</button>
+            
+                    <div class="result" id="utilitiesFootprintResult">Total House Utilities Footprint: X metric tons of CO<sub>2</sub>e</div>
+                </form>    
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <script src="house.js"></script>
+
+</body>
+</html>

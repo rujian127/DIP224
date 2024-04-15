@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations and Insights</title>
+    <link rel="stylesheet" href="recommendationandinsight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .canvas-container {
+            text-align: center;
+        }
+        #carbonGraph {
+            width: 400px; /* Set the width of the canvas */
+            display: block;
+            margin: 0 auto; /* Center the canvas horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="home.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="logo-text">A cool carbon tracker</span>
+            </a>
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Carbon Footprint Calculator</a>
+
+                    <ul class="dropdown">
+                        <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                    </ul>
+
+                </li>
+
+                <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="share.html">Share</a></li>
+            </ul>
+            <div class="account-name">
+                <ul>
+                    <li><a href="personal.html">Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="canvas-container">
+            <canvas id="carbonGraph" width="400" height="200"></canvas>
+        </div>
+
+        <div class="recommend">
+            <h1>Recommendations</h1>
+                <p>
+                    Use Renewable Energy: Opt for renewable sources like solar or wind power to reduce reliance on fossil fuels.
+
+                    Choose Sustainable Transportation: Use public transport, carpooling, or biking to reduce emissions from commuting.
+
+                    Practice Waste Reduction: Recycle, compost, and minimize single-use plastics to lower waste and environmental impact.
+                </p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="climate-change-section">
+            <h1>Causes and Effects of Climate Change</h1>
+            <p>Fossil fuels – coal, oil and gas – are by far the largest contributor to global climate change, accounting for over 75 per cent of global greenhouse gas emissions and nearly 90 per cent of all carbon dioxide emissions.</p>
+            <p>As greenhouse gas emissions blanket the Earth, they trap the sun’s heat. This leads to global warming and climate change. The world is now warming faster than at any point in recorded history. Warmer temperatures over time are changing weather patterns and disrupting the usual balance of nature. This poses many risks to human beings and all other forms of life on Earth.</p>
+        </div>
+    </div>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                var scores = Object.values(response);
+                var labels = Object.keys(response);
+                var canvas = document.getElementById('carbonGraph');
+                var ctx = canvas.getContext('2d');
+                var barWidth = 100;
+                var barMargin = 20;
+                var startX = (canvas.width - (barWidth * scores.length + barMargin * (scores.length - 1))) / 2;
+                var startY = canvas.height - 20;
+                var maxValue = Math.max(...scores);
+                var scaleFactor = canvas.height / maxValue;
+
+                for (var i = 0; i < scores.length; i++) {
+                    var barHeight = scores[i] * scaleFactor;
+                    ctx.fillStyle = 'rgba(54, 162, 235, 0.5)';
+                    ctx.fillRect(startX, startY - barHeight, barWidth, barHeight);
+                    ctx.fillStyle = 'black';
+                    ctx.fillText(labels[i], startX + barWidth / 2, startY + 15);
+                    ctx.fillText((scores[i] * 100).toFixed(2) + '%', startX + barWidth / 2 - 15, startY - barHeight - 5); // Display score above the bar
+                    startX += barWidth + barMargin;
+                }
+            }
+        };
+        xhttp.open("GET", "recommendationandinsight.php", true);
+        xhttp.send();
+    </script>
+</body>
+</html>

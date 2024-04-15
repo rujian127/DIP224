@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <link rel="stylesheet" href="car1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solitreo&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="message" style="display: none;"></div>
+    <form id="car-form" action="car1.php" method="post">
+        <div class="banner">
+        <div class="navbar">
+            <a href="home.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="logo-text">A cool carbon tracker</span>
+            </a>
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Carbon Footprint Calculator</a>
+                    <ul class = "dropdown">
+                        <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="share.html">Share</a></li>
+            </ul>
+            <div class="account-name">
+                <ul>
+                    <li><a href="personal.html">Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="accountmanagement">
+                    <h1 class="navbar-title">Account Management</h1>
+                    <ul class="navbar-menu">
+                        <li><a href="personal.html"><span class="nav-item">Personal Information</span></a></li>
+                        <li><a href="car1.html"><span class="nav-item">Transportation - Car</span></a></li>
+                        <li><a href="motorbike.html"><span class="nav-item">Transportation - Motorbike</span></a></li>
+                        <li><a href="busandrail.html"><span class="nav-item">Transportation - Bus and Rail</span></a></li>
+                        <li><a href="airplane.html"><span class="nav-item">Transportation - Flight</span></a></li>
+                        <li><a href="diet.html"><span class="nav-item">Diet</span></a></li>
+                        <li><a href="house.html"><span class="nav-item">House Utilities</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container2">
+
+                <div class="car-section">
+
+                    <div class="car-image"></div>
+
+                    <label for="car", style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 30px; justify-content: center;">Transportation - Car</label>
+
+                    <textarea placeholder="Please provide us your details here.." required></textarea>
+        
+                </div>
+
+
+                <div class="car-form">
+
+                    <div class="input-group">
+                        <label for="mileage">Mileage:</label>
+                        <input type="number" id="mileage" name="mileage" placeholder="enter number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="years">Year of Manufacturing:</label>
+                        <select id="years" name="years">
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+
+                        </select>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="manufacturers">Manufacturers:</label>
+                        <select id="manufacturers" name="manufacturers">
+                            <option value="Toyota">Toyota</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Porsche">Porsche</option>
+                        </select>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="model">Model:</label>
+                        <select id="model" name="model">
+                            <option value="Vios">Vios</option>
+                            <option value="Camry">Camry</option>
+                            <option value="City">City</option>
+                            <option value="Civic">Civic</option>
+                            <option value="GTR">GTR</option>
+                            <option value="Almera">Almera</option>
+                            <option value="R8">R8</option>
+                            <option value="A4">A4</option>
+                            <option value="M3">M3</option>
+                            <option value="M4">M4</option>
+                            <option value="911 Carrera">911 Carrera</option>
+                            <option value="Panamera">Panamera</option>
+
+                        </select>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="efficiency">Enter Efficiency:</label>
+                        <input type="number" id="efficiency" name="efficiency" placeholder="number">
+                        <select id="efficiency">
+                            <option value="g_km">g/km</option>
+                            <option value="l_100km">L/100km</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="fuel-type">Fuel Type:</label>
+                        <select id="fuel-type" name="fuel_type">
+                            <option value="petrol">Petrol</option>
+                            <option value="diesel">Diesel</option>
+                        </select>
+                    </div>
+
+                    <!-- Repeat for other transport types -->
+                    <button id="calculateCar">Calculate and Add to Footprint</button>
+
+                    <div class="result" id="CarFootprintResult">Total Car Footprint: X Metric Tons of CO<sub>2</sub>e</div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</form>
+
+<script src="car1.js"></script>
+
+
+</body>
+</html>

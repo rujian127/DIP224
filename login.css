@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Popppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.navbar {
+  position: absolute;
+  top: 50px; /* Adjust this value to fit your design */
+  left: 48%; /* Center the navbar horizontally */
+  transform: translateX(-50%); /* Align the center of the navbar with the center of the page */
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  width: 150px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 1.2em;
+  color: #fff;  
+}
+
+.login {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-top: 40px;
+}
+
+.login h1{
+  font-size: 36px;
+  text-align: center;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input input {
+  width: calc(100% - 40px);
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px;
+  padding-right: 40px;
+}
+
+.input i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+.login .rememberforgot,
+.login .btn,
+.login .register {
+  margin-top: 15px;
+}
+
+
+
+.login .rememberforgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.rememberforgot label input {
+  color: #fff;
+  margin-right: 3px;
+}
+
+.rememberforgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.rememberforgot a:hover {
+  text-decoration: underline;
+}
+
+.login .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.login .register {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+
+}
+
+.line{
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: #d4d4d4;
+}
+
+.line::before{
+  content:'Or';
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: -8px;
+  right: 50%;
+  left: 152px;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background:transparent;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 7px;
+}
+
+.media-options a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.facebook{
+  color: #fff;
+  background-color: #4267b2;
+}
+
+a.facebook .facebook-icon{
+  height: 28px;
+  width: 28px;
+  color: #0171d3;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.facebook-icon{
+  position: absolute;
+  top: 521px;
+  left: 108px;
+  transform: translateX(-50%);
+}
+
+img.google-img{
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+  position: absolute;
+  top: 591px;
+  left: 108px;
+  transform: translateX(-50%);
+}
+
+a.google{
+  border: 1px solid #CACACA;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+a.google span{
+  font-weight: 500;
+  opacity: 0.6;
+  color: #232836;
+}

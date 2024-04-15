@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Plane</title>
+    <link rel="stylesheet" href="airplane.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solitreo&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="message" style="display: none;"></div> 
+    <div class="banner">
+        <div class="navbar">
+            <a href="home.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="logo-text">A cool carbon tracker</span>
+            </a>
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Carbon Footprint Calculator</a>
+                    <ul class = "dropdown">
+                        <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="share.html">Share</a></li>
+            </ul>
+            <div class="account-name">
+                <ul>
+                    <li><a href="personal.html">Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="accountmanagement">
+                    <h1 class="navbar-title">Account Management</h1>
+                    <ul class="navbar-menu">
+                        <li><a href="personal.html"><span class="nav-item">Personal Information</span></a></li>
+                        <li><a href="car1.html"><span class="nav-item">Transportation - Car</span></a></li>
+                        <li><a href="motorbike.html"><span class="nav-item">Transportation - Motorbike</span></a></li>
+                        <li><a href="busandrail.html"><span class="nav-item">Transportation - Bus and Rail</span></a></li>
+                        <li><a href="airplane.html"><span class="nav-item">Transportation - Flight</span></a></li>
+                        <li><a href="diet.html"><span class="nav-item">Diet</span></a></li>
+                        <li><a href="house.html"><span class="nav-item">House Utilities</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container2">
+
+                <div class="plain-section">
+
+                    <div class="plain-image"></div>
+
+                    <label for="plain", style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 30px; justify-content: center;">Transportation - Flights</label>
+
+                    <textarea placeholder="Please provide us your details here.." required></textarea>
+        
+                </div>
+
+
+                <form class="flight-form" action="airplane.php" method="post">
+
+                    <div class="input-group">
+                        <label for="from1">From:</label>
+                        <input type="text" id="from1" name="from1" placeholder="Three letter IATA code/airport or city name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="to1">To:</label>
+                        <input type="text" id="to1" name="to1" placeholder="Three letter IATA code/airport or city name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="class">Class:</label>
+                        <select id="class" name="class">
+                            <option value="economy">Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first_class">First Class</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="trips">Trips:</label>
+                        <input type="number" id="trips" name="trips" placeholder="number">
+                    </div>
+
+                    <div class="input-group radio-group">
+                        <input type="radio" id="return" name="trip_type" value="return" checked>
+                        <label for="return">Return Trip</label>
+                        <input type="radio" id="one_way" name="trip_type" value="one_way">
+                        <label for="one_way">One-Way Flight</label>
+                    </div>
+                    
+
+                    <button type="submit" id="calculateFlight">Calculate and Add to Footprint</button>
+
+                    <div class="result" id="FlightsFootprintResult">Total Flights Footprint: X Metric Tons of CO<sub>2</sub>e</div>
+                
+                </form>
+                </div>
+                
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="airplane.js"></script>
+
+</body>
+</html>

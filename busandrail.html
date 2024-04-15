@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus and Rail</title>
+    <link rel="stylesheet" href="busandrail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solitreo&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="message" style="display: none;"></div> 
+    <div class="banner">
+        <div class="navbar">
+            <a href="home.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="logo-text">A cool carbon tracker</span>
+            </a>
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Carbon Footprint Calculator</a>
+                    <ul class = "dropdown">
+                        <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="share.html">Share</a></li>
+            </ul>
+            <div class="account-name">
+                <ul>
+                    <li><a href="personal.html">Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="accountmanagement">
+                    <h1 class="navbar-title">Account Management</h1>
+                    <ul class="navbar-menu">
+                        <li><a href="personal.html"><span class="nav-item">Personal Information</span></a></li>
+                        <li><a href="car1.html"><span class="nav-item">Transportation - Car</span></a></li>
+                        <li><a href="motorbike.html"><span class="nav-item">Transportation - Motorbike</span></a></li>
+                        <li><a href="busandrail.html"><span class="nav-item">Transportation - Bus and Rail</span></a></li>
+                        <li><a href="airplane.html"><span class="nav-item">Transportation - Flight</span></a></li>
+                        <li><a href="diet.html"><span class="nav-item">Diet</span></a></li>
+                        <li><a href="house.html"><span class="nav-item">House Utilities</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container2">
+
+                <div class="train-section">
+
+                    <div class="train-image"></div>
+
+                    <label for="train", style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 30px; justify-content: center;">Transportation - Bus and Rail</label>
+
+                    <textarea placeholder="Please provide us your details here.." required></textarea>
+        
+                </div>
+
+                <form class="transport-form" action="busandrail.php" method="post">
+                    
+                    <div class="input-group">
+                        <label for="bus">Bus:</label>
+                        <input type="number" id="bus" name="bus" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="lrt_mrt">Rapid Transit Systems (LRT/MRT):</label>
+                        <input type="number" id="lrt_mrt" name="lrt_mrt" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="commuter_trains">Commuter Trains:</label>
+                        <input type="number" id="commuter_trains" name="commuter_trains" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="monorails">Monorails:</label>
+                        <input type="number" id="monorails" name="monorails" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="taxi_ride_hailing">Taxi/Ride-Hailing Services:</label>
+                        <input type="number" id="taxi_ride_hailing" name="taxi_ride_hailing" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="ferries">Ferries:</label>
+                        <input type="number" id="ferries" name="ferries" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="express_rail_link">Express Rail Link:</label>
+                        <input type="number" id="express_rail_link" name="express_rail_link" placeholder="number">
+                        <span class="input-unit">kilometres</span>
+                    </div>
+            
+                    <button type="submit" id="calculateTransport">Calculate Bus & Rail Footprint</button>
+            
+                    <div class="result" id="transportFootprintResult">Total Bus & Rail Footprint: X Metric Tons of CO<sub>2</sub>e</div>
+
+                </form>
+                
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="busandrail.js"></script>
+    
+</body>
+</html>

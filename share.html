@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Achievement</title>
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solitreo&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="banner">
+
+        <div class="navbar">
+
+            <a href="home.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="logo-text">A cool carbon tracker</span>
+            </a>
+
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Carbon Footprint Calculator</a>
+                    <ul class = "dropdown">
+                        <li><a href="car1.html">Transportation - Car</a></li>
+                        <li><a href="motorbike.html">Transportation - Motorbike</a></li>
+                        <li><a href="busandrail.html">Transportation - Bus and Rail</a></li>
+                        <li><a href="airplane.html">Transportation - Flight</a></li>
+                        <li><a href="diet.html">Diet</a></li>
+                        <li><a href="house.html">House Utilities</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="recommendationandinsight.html">Recommendations and Insights</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="share.html">Share</a></li>
+            </ul>
+
+            <div class="account-name">
+
+                <ul>
+                    <li><a href="personal.html">Name of Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <h2>Share Your Achievement!</h2>
+
+        <div class="badge-select">
+            <label for="badge">Choose Your Achivement:</label>
+            <br>
+            <select id="badge" name="badge" onchange="updateBadgeImage()">
+                <option value="eco_novice">Select Achievement..</option>
+                <option value="eco_novice">Eco Friendly</option>
+                <option value="asdasf">Eco Warrior</option>
+            </select>
+        </div>
+
+        <div class="image-group">
+            <label for="imagePreview">Badge Preview:</label>
+            <br>
+            <br>
+            <!-- The id "badgeImage" is where we will change the src attribute -->
+            <img id="badgeImage" src="default-badge.png" alt="Badge Preview" style="max-width: 200px;" />
+        </div>
+
+
+        <div class="social-share-container">
+
+            <label for="social-share">Share on:</label>
+
+            <a href="http://facebook.com" target="_blank" class="social-share-button" id="facebook-share">
+                <img src="facebook icon.jpeg" alt="Facebook">
+            </a>
+
+
+            <!-- Repeat for the other buttons, with the correct URLs and image paths -->
+            <a href="http://instagram.com" target="_blank" class="social-share-button" id="instagram-share">
+                <!-- Insert Skype icon image here -->
+                <img src="instagram-icon.png" alt="Skype">
+            </a>
+
+            <a href="http://twitter.com" target="_blank" class="social-share-button" id="twitter-share">
+                <!-- Insert Twitter icon image here -->
+                <img src="twitter-icone.png" alt="Twitter">
+            </a>
+
+        </div>
+        
+    </div>
+    
+    <script>
+        function updateBadgeImage() {
+            var badgeSelect = document.getElementById('badge');
+            var badgeImage = document.getElementById('badgeImage');
+            
+            var images = {
+                'eco_novice': '1st badge.jpg',
+                'asdasf': '2nd badge.jpg',
+                'cbcb': 'path-to-cbcb-image.png'
+            };
+            
+            // Change the image source based on the selected badge
+            badgeImage.src = images[badgeSelect.value];
+        }
+    </script>
+
+</body>
+</html>

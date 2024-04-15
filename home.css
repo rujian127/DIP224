@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: auto; /* Use 100vh to cover the full viewport height */
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('background.jpg'); /* Make sure the path to your image is correct */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    padding-bottom: 252px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Set the color of the text in the link */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.logo-text {
+    margin-left: 10px; /* Adjust the margin as needed */
+    font-size: 1.2em;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 28px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(196, 196, 128);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.5s ease;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar ul li .dropdown li {
+    display: block;
+    margin: 20px;
+}
+
+.navbar ul li .dropdown {
+    margin-top: 2px;
+    width: 300px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);    
+    position: absolute;
+    align-items: center;
+    z-index: 999;
+    display: none;
+}
+
+.navbar ul li .dropdown a {
+    color: rgb(255, 255, 255);
+}
+
+.navbar ul li:hover ul.dropdown {
+    display: block;
+}
+
+.account-name {
+    display: flex;
+    align-items: center;
+}
+
+.account-name ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.account-name ul li {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.account-name ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.learning-section {
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.learning-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.card {
+    flex-basis: calc(33.333% - 20px); /* Adjust the gap if needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px; /* Optional, for rounded corners */
+    text-align: left;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Optional, for rounded image corners */
+}
+
+.card h3 {
+    color: #fff; /* Title color */
+    margin-top: 20px;
+}
+
+.card p {
+    color: #fff; /* Text color */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .learning-cards {
+        flex-direction: column;
+    }
+  
+    .card {
+        flex-basis: auto;
+    }
+}
